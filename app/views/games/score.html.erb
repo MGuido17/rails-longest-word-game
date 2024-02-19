@@ -1,0 +1,10 @@
+<h1>Result</h1>
+<% if @counter > 0 %>
+<p><%= "Sorry, but the #{@word.upcase} can't be built out of #{@letters}" %></p>
+<% elsif @valid_word["found"] == false%>
+<p><%= "#{@word.upcase} does not seem to be a valid English word :(" %></p>
+<% else %>
+<p><%= "Congratulations! #{@word.upcase} is a valid English word! " %></p>
+<% end %>
+
+<%= link_to "Play again!", "/new" %>
